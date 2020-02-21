@@ -20,8 +20,11 @@ public class PlayerMovement : MonoBehaviour {
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        UpdateAnimationAndMove();
 	}
+
+    private void FixedUpdate() {
+        UpdateAnimationAndMove();
+    }
 
     void UpdateAnimationAndMove()
     {
