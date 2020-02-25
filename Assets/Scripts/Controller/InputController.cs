@@ -23,10 +23,7 @@ public class InputController : MonoBehaviour
         int y = Mathf.RoundToInt(Input.GetAxisRaw("Vertical"));
 
         // Checks if keyboard input for movement is detected
-        if (x != 0 || y != 0)
-        {
-            Move(new Point(x, y));
-        }
+        Move(new Point(x, y));
 
         // Checks if each Fire button has been released
         for (int i = 0; i < 3; i++)
