@@ -975,6 +975,24 @@
  <tile id="1160" terrain="0,0,0,3"/>
  <tile id="1161" terrain="0,0,3,3"/>
  <tile id="1162" terrain="0,0,3,0"/>
+ <tile id="1163">
+  <animation>
+   <frame tileid="1163" duration="300"/>
+   <frame tileid="1165" duration="300"/>
+   <frame tileid="1167" duration="300"/>
+   <frame tileid="1169" duration="300"/>
+   <frame tileid="1171" duration="300"/>
+  </animation>
+ </tile>
+ <tile id="1164">
+  <animation>
+   <frame tileid="1164" duration="300"/>
+   <frame tileid="1166" duration="300"/>
+   <frame tileid="1168" duration="300"/>
+   <frame tileid="1170" duration="300"/>
+   <frame tileid="1172" duration="300"/>
+  </animation>
+ </tile>
  <tile id="1174" terrain="0,0,0,2"/>
  <tile id="1175" terrain="0,0,2,2"/>
  <tile id="1176" terrain="0,0,2,0"/>
@@ -983,6 +1001,24 @@
  <tile id="1200" terrain="0,3,0,3"/>
  <tile id="1201" terrain="3,3,3,3"/>
  <tile id="1202" terrain="3,0,3,0"/>
+ <tile id="1203">
+  <animation>
+   <frame tileid="1203" duration="300"/>
+   <frame tileid="1205" duration="300"/>
+   <frame tileid="1207" duration="300"/>
+   <frame tileid="1209" duration="300"/>
+   <frame tileid="1211" duration="300"/>
+  </animation>
+ </tile>
+ <tile id="1204">
+  <animation>
+   <frame tileid="1204" duration="300"/>
+   <frame tileid="1206" duration="300"/>
+   <frame tileid="1208" duration="300"/>
+   <frame tileid="1210" duration="300"/>
+   <frame tileid="1212" duration="300"/>
+  </animation>
+ </tile>
  <tile id="1214" terrain="0,2,0,2"/>
  <tile id="1215" terrain="2,2,2,2"/>
  <tile id="1216" terrain="2,0,2,0"/>
@@ -991,11 +1027,21 @@
  <tile id="1240" terrain="0,3,0,0"/>
  <tile id="1241" terrain="3,3,0,0"/>
  <tile id="1242" terrain="3,0,0,0"/>
+ <tile id="1243">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="6" y="0" width="4" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="1254" terrain="0,2,0,0"/>
  <tile id="1255" terrain="2,2,0,0"/>
  <tile id="1256" terrain="2,0,0,0"/>
  <tile id="1280" terrain="3,3,3,0"/>
  <tile id="1281" terrain="3,3,0,3"/>
+ <tile id="1283">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="6" y="0" width="4" height="7"/>
+  </objectgroup>
+ </tile>
  <tile id="1294" terrain="2,2,2,0"/>
  <tile id="1295" terrain="2,2,0,2"/>
  <tile id="1320" terrain="3,0,3,3"/>
