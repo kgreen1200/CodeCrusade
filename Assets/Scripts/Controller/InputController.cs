@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    public static event EventHandler<InfoEventArgs<Point>> moveEvent;
-    public static event EventHandler<InfoEventArgs<int>> fireEvent;
+    public static CustomEvent<Point> moveEvent = new CustomEvent<Point>();
+    public static CustomEvent<int> fireEvent = new CustomEvent<int>();
 
     string[] _buttons = new string[] { "Fire1", "Fire2", "Fire3" };
 
@@ -22,7 +21,6 @@ public class InputController : MonoBehaviour
         int x = Mathf.RoundToInt(Input.GetAxisRaw("Horizontal"));
         int y = Mathf.RoundToInt(Input.GetAxisRaw("Vertical"));
 
-        // Checks if keyboard input for movement is detected
         Move(new Point(x, y));
 
         // Checks if each Fire button has been released
@@ -35,17 +33,17 @@ public class InputController : MonoBehaviour
         }
     }
 
-    // Calls moveEvent function if one is loaded in moveEvent
+    // Invoke events stored in moveEvent
     void Move(Point p)
     {
         if (moveEvent != null)
-            moveEvent(this, new InfoEventArgs<Point>(p));
+            moveEvent.Invoke(p);
     }
 
-    // Calls fireEvent function if one is loaded in fireEvent
+    // Invoke events stored in fireEvent
     void Fire(int i)
     {
         if (fireEvent != null)
-            fireEvent(this, new InfoEventArgs<int>(i));
+            fireEvent.Invoke(i);
     }
 }

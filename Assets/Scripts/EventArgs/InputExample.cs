@@ -19,27 +19,27 @@ public class InputExample : MonoBehaviour
     // OnEnable is called whenever gameobject is enabled (including on startup)
     void OnEnable()
     {
-        InputController.moveEvent += OnMoveEvent;
-        InputController.fireEvent += OnFireEvent;
+        InputController.moveEvent.AddListener(OnMoveEvent);
+        InputController.fireEvent.AddListener(OnFireEvent);
     }
 
     // OnDisable is called whenever gameobject is disabled
     void OnDisable()
     {
-        InputController.moveEvent -= OnMoveEvent;
-        InputController.fireEvent -= OnFireEvent;
+        InputController.moveEvent.RemoveListener(OnMoveEvent);
+        InputController.fireEvent.RemoveListener(OnFireEvent);
     }
 
     // Custom OnMoveEvent
-    void OnMoveEvent(object sender, InfoEventArgs<Point> e)
+    void OnMoveEvent(Point p)
     {
-        Debug.Log("Move " + e.info.ToString());
+        Debug.Log("Move " + p.x + ", " + p.y);
     }
 
     // Custom OnFireEvent
-    void OnFireEvent(object sender, InfoEventArgs<int> e)
+    void OnFireEvent(int i)
     {
-        Debug.Log("Fire " + e.info);
+        Debug.Log("Fire " + i);
     }
 
 }

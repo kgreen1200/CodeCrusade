@@ -24,27 +24,27 @@ public class OverworldController : MonoBehaviour
     void OnEnable()
     {
         // Loads functions into InputController
-        InputController.moveEvent += OnMoveEvent;
-        InputController.fireEvent += OnFireEvent;
+        InputController.moveEvent.AddListener(OnMoveEvent);
+        InputController.fireEvent.AddListener(OnFireEvent);
     }
 
     // OnDisable is called whenver object is disabled
     void OnDisable()
     {
         // Unloads functions from InputController
-        InputController.moveEvent -= OnMoveEvent;
-        InputController.fireEvent -= OnFireEvent;
+        InputController.moveEvent.RemoveListener(OnMoveEvent);
+        InputController.fireEvent.RemoveListener(OnFireEvent);
     }
 
     // Custom OnMoveEvent triggered from InputController
-    void OnMoveEvent(object sender, InfoEventArgs<Point> e)
+    void OnMoveEvent(Point p)
     {
-        player.SetChange(e.info.x, e.info.y);
+        player.SetChange(p.x, p.y);
     }
 
     // Custom OnFireEvent triggered from InputController
-    void OnFireEvent(object sender, InfoEventArgs<int> e)
+    void OnFireEvent(int i)
     {
-        Debug.Log("Fire " + e.info);
+        Debug.Log("Fire " + i);
     }
 }
