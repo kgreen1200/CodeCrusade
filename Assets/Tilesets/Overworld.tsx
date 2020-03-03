@@ -551,6 +551,21 @@
    <object id="1" x="0" y="0" width="14" height="16"/>
   </objectgroup>
  </tile>
+ <tile id="207">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="4" width="16" height="10"/>
+  </objectgroup>
+ </tile>
+ <tile id="208">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="5" width="14" height="10"/>
+  </objectgroup>
+ </tile>
+ <tile id="209">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="5" width="14" height="9"/>
+  </objectgroup>
+ </tile>
  <tile id="216">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="0" width="16" height="12"/>
