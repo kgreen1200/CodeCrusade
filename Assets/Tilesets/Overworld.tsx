@@ -993,6 +993,15 @@
    <frame tileid="1172" duration="300"/>
   </animation>
  </tile>
+ <tile id="1165">
+  <animation>
+   <frame tileid="1165" duration="300"/>
+   <frame tileid="1167" duration="300"/>
+   <frame tileid="1169" duration="300"/>
+   <frame tileid="1171" duration="300"/>
+   <frame tileid="1163" duration="300"/>
+  </animation>
+ </tile>
  <tile id="1174" terrain="0,0,0,2"/>
  <tile id="1175" terrain="0,0,2,2"/>
  <tile id="1176" terrain="0,0,2,0"/>
