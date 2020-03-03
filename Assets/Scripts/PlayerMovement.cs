@@ -45,7 +45,9 @@ public class PlayerMovement : MonoBehaviour {
 
     public void SetChange(int x, int y)
     {
-        change.x = x;
-        change.y = y;
+        Vector2 delta = new Vector2(x, y);
+        delta = (delta.magnitude > 1f) ? delta.normalized : delta;
+        change.x = delta.x;
+        change.y = delta.y;
     }
 }
