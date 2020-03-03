@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour {
     
     void FixedUpdate()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
+        transform.position = new Vector3(player.position.x, player.position.y + player.GetComponent<BoxCollider2D>().offset.y, transform.position.z);
     }
 
 }
