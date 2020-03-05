@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public float speed;
+    public AudioSource walkSound;
     private Rigidbody2D myRigidBody;
     private Vector3 change = Vector3.zero;
     private Animator animator;
@@ -31,6 +32,10 @@ public class PlayerMovement : MonoBehaviour {
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
             animator.SetBool("moving", true);
+            if (!walkSound.isPlaying)
+            {
+                walkSound.Play();
+            }
         }
         else
         {
