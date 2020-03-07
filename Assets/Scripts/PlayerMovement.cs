@@ -6,9 +6,25 @@ public class PlayerMovement : MonoBehaviour {
 
     public float speed;
     public AudioSource walkSound;
+
     private Rigidbody2D myRigidBody;
     private Vector3 change = Vector3.zero;
     private Animator animator;
+
+    public static PlayerMovement Instance { get; private set; }
+
+    // Runs before any Start() function and initializes Instance
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -50,9 +66,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public void SetChange(int x, int y)
     {
-        Vector2 delta = new Vector2(x, y);
+        Vector3 delta = new Vector3(x, y, 0);
         delta = (delta.magnitude > 1f) ? delta.normalized : delta;
-        change.x = delta.x;
-        change.y = delta.y;
+        change = delta;
     }
 }
