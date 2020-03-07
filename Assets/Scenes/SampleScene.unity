@@ -471,18 +471,21 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7343688276079350171, guid: 5875782223966b4479220c1fddc9a049,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: speed
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 7343688276079350171, guid: 5875782223966b4479220c1fddc9a049,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: rb
       value: 
       objectReference: {fileID: 1673599211}
+    - target: {fileID: 886475429144432027, guid: 5875782223966b4479220c1fddc9a049,
+        type: 3}
+      propertyPath: walkSound
+      value: 
+      objectReference: {fileID: 1432832286}
     m_RemovedComponents:
-    - {fileID: 7343688276079350171, guid: 5875782223966b4479220c1fddc9a049, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5875782223966b4479220c1fddc9a049, type: 3}
 --- !u!1 &1432826888
 GameObject:
@@ -533,20 +536,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1317189536}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1432832283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432832281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac6ca5086e56f644bb73f5413a8f0ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  walkSound: {fileID: 1432832286}
 --- !u!82 &1432832286
 AudioSource:
   m_ObjectHideFlags: 0
@@ -660,7 +649,7 @@ GameObject:
   - component: {fileID: 2137173497}
   - component: {fileID: 2137173496}
   m_Layer: 0
-  m_Name: OverworldController
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,10 +664,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2137173495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7aad2955743fe42a55d601bba2ef33, type: 3}
+  m_Script: {fileID: 11500000, guid: aea7c02d5cf219742b7a8d7800af68c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 1432832281}
+  currentState: {fileID: 0}
 --- !u!4 &2137173497
 Transform:
   m_ObjectHideFlags: 0
