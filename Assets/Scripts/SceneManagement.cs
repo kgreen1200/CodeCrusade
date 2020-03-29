@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MoveToSample : MonoBehaviour
+public class SceneManagement : MonoBehaviour
 {
     private int pressCount;
     // Start is called before the first frame update
@@ -15,6 +15,11 @@ public class MoveToSample : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Cancel") && SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            Debug.Log("Player has hit escape");
+            SceneManager.LoadScene("Interior Debug", LoadSceneMode.Single);
+        }
         if (Input.GetButtonDown("Fire3"))
         {
             pressCount = pressCount + 1;
