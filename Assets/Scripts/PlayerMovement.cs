@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour {
         UpdateAnimation();
 	}
 
+    // Updates the character movement outside of the framerate
     private void FixedUpdate() {
         MoveCharacter();
     }
@@ -45,12 +46,13 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (change != Vector3.zero)
         {
+            // Changes the sprite animation based on the movement of the character
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
             animator.SetBool("moving", true);
             if (!walkSound.isPlaying)
             {
-                walkSound.Play();
+                walkSound.Play(); // plays the walking audio whenever the player is moving
             }
         }
         else
