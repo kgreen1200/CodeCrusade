@@ -42,6 +42,13 @@ public class OverworldState : State
     // Custom OnFireEvent triggered from InputController
     void OnFireEvent(int i)
     {
-        Debug.Log("Fire " + i);
+        switch(i)
+        {
+            case 3:
+                GameController.Instance.Transition<PauseState>();
+                break;
+            default:
+                break;
+        }
     }
 }

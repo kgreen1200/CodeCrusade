@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
+    protected GameController owner;
+
+    // Called before Start()
+    void Awake()
+    {
+        owner = GetComponent<GameController>();
+    }
+
     public virtual void Enter()
     {
         AddListeners();

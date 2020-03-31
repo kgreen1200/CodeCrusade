@@ -19,7 +19,7 @@ public class StateMachine : MonoBehaviour
     }
 
     // Calls exit of previous State then calls Enter for the new one
-    protected virtual void Transition<T>() where T : State
+    public virtual void Transition<T>() where T : State
     {
         if (currentState != null)
         {

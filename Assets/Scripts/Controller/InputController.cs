@@ -7,7 +7,7 @@ public class InputController : MonoBehaviour
     public static CustomEvent<Point> moveEvent = new CustomEvent<Point>();
     public static CustomEvent<int> fireEvent = new CustomEvent<int>();
 
-    string[] _buttons = new string[] { "Fire1", "Fire2", "Fire3" };
+    string[] _buttons = new string[] { "Fire1", "Fire2", "Fire3", "Cancel" };
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class InputController : MonoBehaviour
         Move(new Point(x, y));
 
         // Checks if each Fire button has been released
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (Input.GetButtonUp(_buttons[i]))
             {
