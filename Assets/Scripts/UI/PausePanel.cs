@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PausePanel : BasePanel
 {
@@ -97,6 +98,7 @@ public class PausePanel : BasePanel
 
     public void Resume()
     {
+        Debug.Log("Resume Here");
         GameController.Instance.Transition<OverworldState>();
     }
 
@@ -113,5 +115,7 @@ public class PausePanel : BasePanel
     public void Quit()
     {
         Debug.Log("Quit Here");
+        Debug.Log("Loading to Main Menu");
+        SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
     }
 }

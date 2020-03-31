@@ -1602,6 +1602,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 280624337}
     m_Modifications:
+    - target: {fileID: 6287611714486052156, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Quit Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287611715092764692, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Save and Quit Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287611715281249172, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Resume Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287611715352967544, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Quit Button
+      objectReference: {fileID: 0}
     - target: {fileID: 6287611715639722473, guid: abac8c09606b7a343b9f9525e17aff86,
         type: 3}
       propertyPath: m_Name
@@ -1711,6 +1731,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287611715876383253, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Glossary Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287611716048112769, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Resume Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287611716247362835, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Save and Exit Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287611716505084831, guid: abac8c09606b7a343b9f9525e17aff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Resume Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abac8c09606b7a343b9f9525e17aff86, type: 3}
