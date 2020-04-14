@@ -255,6 +255,16 @@
    <frame tileid="82" duration="200"/>
   </animation>
  </tile>
+ <tile id="84">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="6" y="0" width="10" height="12"/>
+  </objectgroup>
+ </tile>
+ <tile id="85">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="11" height="12"/>
+  </objectgroup>
+ </tile>
  <tile id="96">
   <animation>
    <frame tileid="96" duration="200"/>
@@ -554,6 +564,11 @@
  <tile id="203">
   <objectgroup draworder="index" id="2">
    <object id="1" x="2" y="0" width="14" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="204">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
   </objectgroup>
  </tile>
  <tile id="205">
