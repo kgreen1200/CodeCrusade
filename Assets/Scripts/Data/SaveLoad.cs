@@ -7,7 +7,7 @@ using UnityEngine;
 public static class SaveLoad
 {
     public static List<Game> savedGames = new List<Game>();
-    static string fileName = "/savedGames.gd";
+    static string fileName = "/savedGames.codecrusade";
 
     public static void Save()
     {
