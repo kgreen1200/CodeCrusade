@@ -1,26 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
-public class LoadButton : MonoBehaviour
+public class MainMenuPanel : MonoBehaviour
 {
-    Button button;
+    Dictionary<int, UnityAction> commands = new Dictionary<int, UnityAction>();
 
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    void Load()
-    {
-        SaveLoad.Load();
     }
 }

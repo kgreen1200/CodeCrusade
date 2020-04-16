@@ -3,23 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
-public class PausePanel : BasePanel
+public class PausePanel : ButtonPanel
 {
-    List<Button> entries = new List<Button>();
-    int selection = 0;
-
-    Dictionary<int, UnityEngine.Events.UnityAction> commands = new Dictionary<int, UnityEngine.Events.UnityAction>();
-
-    // Called before Start()
-    void Awake()
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Button button = transform.GetChild(i).gameObject.GetComponent<Button>();
-            entries.Add(button);
-        }
-    }
+    Dictionary<int, UnityAction> commands = new Dictionary<int, UnityAction>();
 
     // Start is called before the first frame update
     void Start()
@@ -33,69 +21,6 @@ public class PausePanel : BasePanel
         {
             entries[i].onClick.AddListener(commands[i]);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Next();
-        }
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
-            Previous();
-        }
-    }
-
-    // Called whenever object is enabled
-    void OnEnable()
-    {
-        selection = 0;
-        AddListeners();
-        entries[selection].Select();
-        Time.timeScale = 0f;
-    }
-
-    // Called whenever object is disabled
-    void OnDisable()
-    {
-        RemoveListeners();
-        Time.timeScale = 1f;
-    }
-
-    // Call onClick functions when Fired
-    protected override void OnFireEvent(int i)
-    {
-        switch(i)
-        {
-            case 0:
-                entries[selection].onClick.Invoke();
-                break;
-            default:
-                break;
-        }
-    }
-
-    // Cycle down menu
-    void Next()
-    {
-        selection = (selection + 1 < entries.Count) ? (selection + 1) : 0;
-        entries[selection].Select();
-    }
-
-    // Cycle up menu
-    void Previous()
-    {
-        selection = (selection - 1 >= 0) ? (selection - 1) : (entries.Count - 1);
-        entries[selection].Select();
-    }
-
-    // For outside objects to set selection
-    public void SetSelection(Button button)
-    {
-        selection = entries.IndexOf(button);
-        entries[selection].Select();
     }
 
     public void Resume()
