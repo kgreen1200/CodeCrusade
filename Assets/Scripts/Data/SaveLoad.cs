@@ -14,6 +14,7 @@ public static class SaveLoad
         savedGames.Add(Game.current);
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + fileName);
+        Debug.Log(Application.persistentDataPath + fileName);
         bf.Serialize(file, SaveLoad.savedGames);
         file.Close();
     }

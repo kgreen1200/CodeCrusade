@@ -106,7 +106,7 @@ public class PausePanel : BasePanel
 
     public void Save()
     {
-        Debug.Log("Save Here");
+        SaveLoad.Save();
     }
 
     public void Glossary()
