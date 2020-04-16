@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 259b6ab568543354a937ad6662e73e1f
+guid: 2376ed33932fd9f44ac5cd8ca4695bf3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,7 +10,7 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
   errors:
-  - 'Missing texture asset: ../../../../../OneDrive/Code Crusade Resources/Newgfx/BoxSheet.png'
+  - 'Missing texture asset: ../../../../../OneDrive/Code Crusade Resources/Newgfx/InvertBoxSheet.png'
   warnings: []
   missingSortingLayers: []
   missingLayers: []
