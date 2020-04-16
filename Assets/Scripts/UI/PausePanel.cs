@@ -54,12 +54,14 @@ public class PausePanel : BasePanel
         selection = 0;
         AddListeners();
         entries[selection].Select();
+        Time.timeScale = 0f;
     }
 
     // Called whenever object is disabled
     void OnDisable()
     {
         RemoveListeners();
+        Time.timeScale = 1f;
     }
 
     // Call onClick functions when Fired
