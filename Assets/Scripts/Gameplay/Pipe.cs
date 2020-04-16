@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pipe : MonoBehaviour
 {
     public bool active;
-    public Animatior animator;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
