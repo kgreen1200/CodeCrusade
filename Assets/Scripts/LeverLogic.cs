@@ -29,7 +29,7 @@ public class LeverLogic : MonoBehaviour
         {
             OutputSignal = false;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = OffSprite;
-            Debug.Log("Lever Output signal set to fasle.");
+            Debug.Log("Lever Output signal set to false.");
         }
         if (Input.GetButtonDown("Submit") && IsInTriggerArea)
         {
