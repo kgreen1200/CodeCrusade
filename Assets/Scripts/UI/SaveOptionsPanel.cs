@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MainMenuPanel : ButtonPanel
+public class SaveOptionsPanel : ButtonPanel
 {
     [SerializeField]
-    GameObject playPanel, optionPanel, glossaryPanel;
+    GameObject mainPanel;
 
     GameObject owner;
     Dictionary<int, UnityAction> commands = new Dictionary<int, UnityAction>();
@@ -15,11 +15,10 @@ public class MainMenuPanel : ButtonPanel
     void Start()
     {
         owner = transform.parent.gameObject;
-
-        commands.Add(0, Play);
-        commands.Add(1, Options);
-        commands.Add(2, Glossary);
-        commands.Add(3, ExitGame);
+        
+        commands.Add(0, Load);
+        commands.Add(1, Delete);
+        commands.Add(2, ExitMenu);
 
         for (int i = 0; i < entries.Count; i++)
         {
@@ -27,26 +26,19 @@ public class MainMenuPanel : ButtonPanel
         }
     }
 
-    public void Play()
+    public void Load()
     {
-        playPanel.SetActive(true);
-        owner.SetActive(false);
+        Debug.Log("Load game here");
     }
 
-    public void Options()
+    public void Delete()
     {
-        optionPanel.SetActive(true);
-        owner.SetActive(false);
+        Debug.Log("Delete save file here");
     }
 
-    public void Glossary()
+    public void ExitMenu()
     {
-        glossaryPanel.SetActive(true);
+        mainPanel.SetActive(true);
         owner.SetActive(false);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
     }
 }
