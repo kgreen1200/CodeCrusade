@@ -24,6 +24,18 @@ public class ExitToMainMenuPanel : ButtonPanel
         }
     }
 
+    // Called whenever object is enabled
+    void OnEnable()
+    {
+        Time.timeScale = 0f;
+    }
+
+    // Called whenever object is disabled
+    void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void ExitMenu()
     {
         mainPanel.SetActive(true);

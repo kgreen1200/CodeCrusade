@@ -27,6 +27,20 @@ public class MainMenuPanel : ButtonPanel
         }
     }
 
+    // Called whenever object is enabled
+    void OnEnable()
+    {
+        selection = 0;
+        AddListeners();
+        entries[selection].Select();
+    }
+
+    // Called whenever object is disabled
+    void OnDisable()
+    {
+        RemoveListeners();
+    }
+
     public void Play()
     {
         playPanel.SetActive(true);
