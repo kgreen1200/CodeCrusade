@@ -7,6 +7,9 @@ using UnityEngine.Events;
 
 public class PausePanel : ButtonPanel
 {
+    [SerializeField]
+    GameObject glossaryPanel;
+
     Dictionary<int, UnityAction> commands = new Dictionary<int, UnityAction>();
 
     // Start is called before the first frame update
@@ -23,6 +26,22 @@ public class PausePanel : ButtonPanel
         }
     }
 
+    // Called whenever object is enabled
+    void OnEnable()
+    {
+        selection = 0;
+        AddListeners();
+        entries[selection].Select();
+        Time.timeScale = 0f;
+    }
+
+    // Called whenever object is disabled
+    void OnDisable()
+    {
+        RemoveListeners();
+        Time.timeScale = 1f;
+    }
+
     public void Resume()
     {
         Debug.Log("Resume Here");
@@ -36,13 +55,12 @@ public class PausePanel : ButtonPanel
 
     public void Glossary()
     {
-        Debug.Log("Glossary Here");
+        glossaryPanel.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void Quit()
     {
-        Debug.Log("Quit Here");
-        Debug.Log("Loading to Main Menu");
         SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
     }
 }

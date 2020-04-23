@@ -37,22 +37,6 @@ public class ButtonPanel : BasePanel
         }
     }
 
-    // Called whenever object is enabled
-    void OnEnable()
-    {
-        selection = 0;
-        AddListeners();
-        entries[selection].Select();
-        Time.timeScale = 0f;
-    }
-
-    // Called whenever object is disabled
-    void OnDisable()
-    {
-        RemoveListeners();
-        Time.timeScale = 1f;
-    }
-
     // Cycle down menu
     void Next()
     {

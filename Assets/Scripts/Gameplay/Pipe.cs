@@ -6,6 +6,8 @@ public class Pipe : MonoBehaviour
 {
     public bool active;
     public Animator animator;
+    public Pipe[] inputs;
+    public Pipe[] outputs;
 
     // Start is called before the first frame update
     void Start()

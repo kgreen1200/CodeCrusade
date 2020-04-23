@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MainMenuPanel : ButtonPanel
+public class ExitToMainMenuPanel : ButtonPanel
 {
     [SerializeField]
-    GameObject playPanel, optionPanel, glossaryPanel;
+    GameObject mainPanel;
 
     GameObject owner;
     Dictionary<int, UnityAction> commands = new Dictionary<int, UnityAction>();
@@ -16,10 +16,7 @@ public class MainMenuPanel : ButtonPanel
     {
         owner = transform.parent.gameObject;
 
-        commands.Add(0, Play);
-        commands.Add(1, Options);
-        commands.Add(2, Glossary);
-        commands.Add(3, ExitGame);
+        commands.Add(0, ExitMenu);
 
         for (int i = 0; i < entries.Count; i++)
         {
@@ -30,37 +27,18 @@ public class MainMenuPanel : ButtonPanel
     // Called whenever object is enabled
     void OnEnable()
     {
-        selection = 0;
-        AddListeners();
-        entries[selection].Select();
+        Time.timeScale = 0f;
     }
 
     // Called whenever object is disabled
     void OnDisable()
     {
-        RemoveListeners();
+        Time.timeScale = 1f;
     }
 
-    public void Play()
+    public void ExitMenu()
     {
-        playPanel.SetActive(true);
+        mainPanel.SetActive(true);
         owner.SetActive(false);
-    }
-
-    public void Options()
-    {
-        optionPanel.SetActive(true);
-        owner.SetActive(false);
-    }
-
-    public void Glossary()
-    {
-        glossaryPanel.SetActive(true);
-        owner.SetActive(false);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
     }
 }
