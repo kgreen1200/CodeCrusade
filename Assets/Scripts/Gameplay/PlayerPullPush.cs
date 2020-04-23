@@ -14,19 +14,22 @@ public class PlayerPullPush : MonoBehaviour
         Rigidbody body = hit.collider.attachedRigidbody;
 
         // The function should do nothing if the box / collision has any of these properties.
-        if (body == null || body.isKinematic || hit.moveDirection.z < -0.3f || hit.transform.name != "Box")
+        if (body == null || body.isKinematic || hit.moveDirection.z < -0.3f)
             return;
 
-        Debug.Log("Player has hit box.");
+        if (hit.transform.name.Contains("Gate"))
+        {
+            Debug.Log("Player has hit box.");
 
-        // Calculate push direction from move direction,
-        // we only push objects to the sides never up and down
-        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+            // Calculate push direction from move direction,
+            // we only push objects to the sides never up and down
+            Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
-        // If you know how fast your character is trying to move,
-        // then you can also multiply the push velocity by that.
+            // If you know how fast your character is trying to move,
+            // then you can also multiply the push velocity by that.
 
-        // Apply the push
-        body.velocity = pushDir * pushPower;
+            // Apply the push
+            body.velocity = pushDir * pushPower;
+        }
     }
 }

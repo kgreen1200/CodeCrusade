@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class OrBlock : Block
 {
+
+    public WiringLogic Input1;
+    public WiringLogic Input2;
+    public Sprite OnState;
+    public Sprite OffState;
+    public bool OutputSignal = false;
     // Start is called before the first frame update
     void Start()
     {
         gate = true;
     }
 
-    public override int CalculateOutput(int[] inputs)
+    private void Update()
     {
-        if (inputs.Length != 0)
+        OutputSignal = Input1.GetOutputSignal() || Input2.GetOutputSignal();
+        if (OutputSignal)
         {
-            foreach (int i in inputs)
-            {
-                if (i == 1)
-                {
-                    return 1;
-                }
-            }
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = OnState;
         }
-        return 0;
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = OffState;
+        }
+    }
+
+    public bool GetOutputSignal()
+    {
+        return OutputSignal;
     }
 }

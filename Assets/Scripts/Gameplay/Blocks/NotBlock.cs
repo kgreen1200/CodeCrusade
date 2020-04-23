@@ -4,18 +4,31 @@ using UnityEngine;
 
 public class NotBlock : Block
 {
+    public WiringLogic Input1;
+    public Sprite OnState;
+    public Sprite OffState;
+    public bool OutputSignal = true;
     // Start is called before the first frame update
     void Start()
     {
         gate = true;
     }
 
-    public override int CalculateOutput(int[] inputs)
+    private void Update()
     {
-        if (inputs.Length == 1)
+        OutputSignal = !Input1.GetOutputSignal();
+        if (OutputSignal)
         {
-            return Mathf.Abs(inputs[0] - 1);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = OnState;
         }
-        return 0;
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = OffState;
+        }
+    }
+
+    public bool GetOutputSignal()
+    {
+        return OutputSignal;
     }
 }

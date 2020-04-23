@@ -7,7 +7,12 @@ public class WiringLogic : MonoBehaviour
 
     public LeverLogic Lever;
     public WiringLogic PreviousWire;
-    public bool DoesConnectToLever = true;
+    public AndBlock AndGate;
+    public OrBlock OrGate;
+    public NotBlock NotGate;
+
+    public string InputType = "WIRE";
+
     public Sprite OnSprite;
     public Sprite OffSprite;
     private bool OutputSignal = false;
@@ -20,34 +25,33 @@ public class WiringLogic : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (DoesConnectToLever && OutputSignal != Lever.GetOutputSignal())
+        switch(InputType)
         {
-            OutputSignal = Lever.GetOutputSignal();
-            Debug.Log("Wire Output signal has been swapped");
-            if (OutputSignal == true)
-            {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = OnSprite;
-            }
-            else
-            {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = OffSprite;
-            }
-        }
-        else if (!DoesConnectToLever)
-        {
-            if (OutputSignal != PreviousWire.GetOutputSignal())
-            {
+            case "WIRE":
+                OutputSignal = PreviousWire.GetOutputSignal();
+                break;
+            case "LEVER":
                 OutputSignal = Lever.GetOutputSignal();
-                Debug.Log("Wire Output signal has been swapped");
-                if (OutputSignal == true)
-                {
-                    this.gameObject.GetComponent<SpriteRenderer>().sprite = OnSprite;
-                }
-                else
-                {
-                    this.gameObject.GetComponent<SpriteRenderer>().sprite = OffSprite;
-                }
-            }
+                break;
+            case "AND_GATE":
+                OutputSignal = AndGate.GetOutputSignal();
+                break;
+            case "OR_GATE":
+                OutputSignal = OrGate.GetOutputSignal();
+                break;
+            case "NOT_GATE":
+                OutputSignal = NotGate.GetOutputSignal();
+                break;
+        }
+
+        // Updates the sprite for the wire based on its updated state.
+        if (OutputSignal)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = OnSprite;
+        }
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = OffSprite;
         }
     }
 
