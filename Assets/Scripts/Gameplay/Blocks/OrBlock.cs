@@ -18,7 +18,16 @@ public class OrBlock : Block
 
     private void Update()
     {
-        OutputSignal = Input1.GetOutputSignal() || Input2.GetOutputSignal();
+        var dist = Vector3.Distance(this.gameObject.transform.position, Input1.gameObject.transform.position);
+        if (dist > 0.8f && dist < 1.2f)
+        {
+            OutputSignal = Input1.GetOutputSignal() || Input2.GetOutputSignal();
+        }
+        else
+        {
+            OutputSignal = false;
+        }
+
         if (OutputSignal)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = OnState;
