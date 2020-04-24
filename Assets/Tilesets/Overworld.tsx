@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.3.2" name="Overworld" tilewidth="16" tileheight="16" tilecount="1440" columns="40">
+<tileset version="1.2" tiledversion="1.3.4" name="Overworld" tilewidth="16" tileheight="16" tilecount="1440" columns="40">
  <image source="../Art/gfx/Overworld.png" width="640" height="576"/>
  <terraintypes>
   <terrain name="Normal Grass" tile="0"/>
@@ -842,12 +842,12 @@
    <frame tileid="339" duration="100"/>
   </animation>
  </tile>
- <tile id="360" terrain="0,0,0,">
+ <tile id="360">
   <objectgroup draworder="index" id="2">
    <object id="1" x="13" y="13" width="3" height="3"/>
   </objectgroup>
  </tile>
- <tile id="361" terrain="0,0,,0">
+ <tile id="361">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="13" width="3" height="3"/>
   </objectgroup>
@@ -978,12 +978,12 @@
    <frame tileid="387" duration="100"/>
   </animation>
  </tile>
- <tile id="400" terrain="0,,0,0">
+ <tile id="400">
   <objectgroup draworder="index" id="2">
    <object id="1" x="13" y="0" width="3" height="3"/>
   </objectgroup>
  </tile>
- <tile id="401" terrain=",0,0,0">
+ <tile id="401">
   <objectgroup draworder="index" id="3">
    <object id="2" x="0" y="0" width="3" height="3"/>
   </objectgroup>
