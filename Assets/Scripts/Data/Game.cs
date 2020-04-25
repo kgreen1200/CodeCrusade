@@ -6,8 +6,9 @@ using UnityEngine;
 public class Game
 {
     public static Game current;
-
     public static int state = 1;
+
+    public string name;
 
     public Game()
     {

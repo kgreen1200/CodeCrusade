@@ -7,6 +7,7 @@ public class ButtonPanel : BasePanel
 {
     protected List<Button> entries = new List<Button>();
     protected int selection = 0;
+    protected bool pause = false;
 
     // Called before Start()
     void Awake()
@@ -37,15 +38,37 @@ public class ButtonPanel : BasePanel
         }
     }
 
+    // Called whenever object is enabled
+    void OnEnable()
+    {
+        selection = 0;
+        AddListeners();
+        entries[selection].Select();
+        if (pause)
+        {
+            Time.timeScale = 0f;
+        }
+    }
+
+    // Called whenever object is disabled
+    void OnDisable()
+    {
+        RemoveListeners();
+        if (pause)
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
     // Cycle down menu
-    void Next()
+    protected void Next()
     {
         selection = (selection + 1 < entries.Count) ? (selection + 1) : 0;
         entries[selection].Select();
     }
 
     // Cycle up menu
-    void Previous()
+    protected void Previous()
     {
         selection = (selection - 1 >= 0) ? (selection - 1) : (entries.Count - 1);
         entries[selection].Select();
@@ -57,7 +80,14 @@ public class ButtonPanel : BasePanel
         switch(i)
         {
             case 0:
-                entries[selection].onClick.Invoke();
+                if (entries[selection].onClick.GetPersistentEventCount() != 0)
+                {
+                    string method = entries[selection].onClick.GetPersistentMethodName(0);
+                    if (!IsInvoking(method))
+                    {
+                        entries[selection].onClick.Invoke();
+                    }
+                }
                 break;
             default:
                 break;

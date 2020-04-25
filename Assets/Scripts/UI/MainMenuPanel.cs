@@ -27,36 +27,22 @@ public class MainMenuPanel : ButtonPanel
         }
     }
 
-    // Called whenever object is enabled
-    void OnEnable()
-    {
-        selection = 0;
-        AddListeners();
-        entries[selection].Select();
-    }
-
-    // Called whenever object is disabled
-    void OnDisable()
-    {
-        RemoveListeners();
-    }
-
     public void Play()
     {
-        playPanel.SetActive(true);
         owner.SetActive(false);
+        playPanel.SetActive(true);
     }
 
     public void Options()
     {
-        optionPanel.SetActive(true);
         owner.SetActive(false);
+        optionPanel.SetActive(true);
     }
 
     public void Glossary()
     {
-        glossaryPanel.SetActive(true);
         owner.SetActive(false);
+        glossaryPanel.SetActive(true);
     }
 
     public void ExitGame()
