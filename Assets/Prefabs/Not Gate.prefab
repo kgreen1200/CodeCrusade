@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2509483152986012609}
   m_Layer: 0
   m_Name: Not Gate
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2509483152986012618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.26, y: 0.34, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.25, y: 6.25, z: 6.25}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,7 +47,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0041866824, y: -0.017286375}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   output: 0
   gate: 0
+  inputs: []
   Input1: {fileID: 0}
   OnState: {fileID: -8360878825063904919, guid: fad72984eb06b624e990808a288398ab,
     type: 3}
