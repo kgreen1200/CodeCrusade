@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ExitToMainMenuPanel : ButtonPanel
+public class ExitMenuPanel : ButtonPanel
 {
     [SerializeField]
     GameObject mainPanel;
@@ -14,6 +14,7 @@ public class ExitToMainMenuPanel : ButtonPanel
     // Start is called before the first frame update
     void Start()
     {
+        pause = true;
         owner = transform.parent.gameObject;
 
         commands.Add(0, ExitMenu);
@@ -38,7 +39,7 @@ public class ExitToMainMenuPanel : ButtonPanel
 
     public void ExitMenu()
     {
-        mainPanel.SetActive(true);
         owner.SetActive(false);
+        mainPanel.SetActive(true);
     }
 }
