@@ -28,7 +28,6 @@ public class GridTile : MonoBehaviour
         {
             for (int i = 0; i < wires.transform.childCount; i++)
             {
-                Debug.Log(wires.transform.GetChild(i).name);
                 wires.transform.GetChild(i).GetComponent<Wire>().TurnOn();
             }
         }
@@ -40,7 +39,6 @@ public class GridTile : MonoBehaviour
         {
             for (int i = 0; i < wires.transform.childCount; i++)
             {
-                Debug.Log(wires.transform.GetChild(i).name);
                 wires.transform.GetChild(i).GetComponent<Wire>().TurnOff();
             }
         }
@@ -86,10 +84,11 @@ public class GridTile : MonoBehaviour
             if (output == 1)
             {
                 TurnOnWires();
-                if (!block.gate)
-                {
-                    active = true;
-                }
+                active = true;
+            }
+            if (!block.gate)
+            {
+                active = true;
             }
             return output;
         }
