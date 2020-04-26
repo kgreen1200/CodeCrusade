@@ -80,6 +80,10 @@ public class EndNode : MonoBehaviour
         Clear();
         if (CalculateOutput() == 1 && CheckActive())
         {
+            if (exit != null)
+            {
+                exit.GetComponent<GateOpening>().OpenGate();
+            }
             sprite.color = red;
             return true;
         }

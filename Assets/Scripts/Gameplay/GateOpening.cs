@@ -5,7 +5,6 @@ using UnityEngine;
 public class GateOpening : MonoBehaviour
 {
     // Start is called before the first frame update
-    public WiringLogic Input;
     public Sprite openSprite;
     void Start()
     {
@@ -15,11 +14,12 @@ public class GateOpening : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetOutputSignal())
-        {
-            this.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = openSprite;
-            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
-        }
+    }
+
+    public void OpenGate()
+    {
+        this.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = openSprite;
+        this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
     }
 }
