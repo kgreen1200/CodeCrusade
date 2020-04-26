@@ -6,8 +6,9 @@ using UnityEngine;
 public class GridTile : MonoBehaviour
 {
     public Block block = null;
-    public LeverLogic lever = null;
+    public GameObject wires;
     public GridTile[] inputs;
+    public bool active = false;
 
     Vector2 center;
     SpriteRenderer sprite;
@@ -21,9 +22,33 @@ public class GridTile : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
+    void TurnOnWires()
+    {
+        if (wires != null)
+        {
+            for (int i = 0; i < wires.transform.childCount; i++)
+            {
+                Debug.Log(wires.transform.GetChild(i).name);
+                wires.transform.GetChild(i).GetComponent<Wire>().TurnOn();
+            }
+        }
+    }
+
+    void TurnOffWires()
+    {
+        if (wires != null)
+        {
+            for (int i = 0; i < wires.transform.childCount; i++)
+            {
+                Debug.Log(wires.transform.GetChild(i).name);
+                wires.transform.GetChild(i).GetComponent<Wire>().TurnOff();
+            }
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (lever == null && col.CompareTag("Block"))
+        if (col.CompareTag("Block"))
         {
             col.transform.position = new Vector3(center.x, center.y, 0);
             block = col.GetComponent<Block>();
@@ -54,9 +79,19 @@ public class GridTile : MonoBehaviour
 
     public int CalculateOutput()
     {
+        TurnOffWires();
         if (block != null)
         {
-            return block.CalculateOutput(GetInputs());
+            int output = block.CalculateOutput(GetInputs());
+            if (output == 1)
+            {
+                TurnOnWires();
+                if (!block.gate)
+                {
+                    active = true;
+                }
+            }
+            return output;
         }
         return 0;
     }

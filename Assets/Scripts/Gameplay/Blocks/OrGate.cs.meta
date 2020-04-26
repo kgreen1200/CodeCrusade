@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8f2dead9bc7985545823143315a2e83b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - OnState: {fileID: 8130941861674111095, guid: 8b7165b581aea734aa8d3590e3b5dc3c,
+      type: 3}
+  - OffState: {fileID: 9087071140112546627, guid: 8b7165b581aea734aa8d3590e3b5dc3c,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
