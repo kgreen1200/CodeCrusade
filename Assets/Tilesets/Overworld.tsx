@@ -83,11 +83,33 @@
    <frame tileid="19" duration="200"/>
   </animation>
  </tile>
- <tile id="22" terrain=",,,12"/>
- <tile id="23" terrain=",,12,12"/>
- <tile id="24" terrain=",,12,"/>
- <tile id="28" terrain="12,12,12,"/>
- <tile id="29" terrain="12,12,,12"/>
+ <tile id="22" terrain=",,,12">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="5" height="16"/>
+   <object id="2" x="5" y="0" width="11" height="6"/>
+  </objectgroup>
+ </tile>
+ <tile id="23" terrain=",,12,12">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="24" terrain=",,12,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="11" height="6"/>
+   <object id="2" x="11" y="0" width="5" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="28" terrain="12,12,12,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="11" y="11" width="5" height="5"/>
+  </objectgroup>
+ </tile>
+ <tile id="29" terrain="12,12,,12">
+  <objectgroup draworder="index" id="3">
+   <object id="3" x="0" y="11" width="5" height="5"/>
+  </objectgroup>
+ </tile>
  <tile id="33">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="14" width="16" height="2"/>
@@ -197,11 +219,28 @@
    <frame tileid="141" duration="200"/>
   </animation>
  </tile>
- <tile id="62" terrain=",12,,12"/>
+ <tile id="62" terrain=",12,,12">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="5" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="63" terrain="12,12,12,12"/>
- <tile id="64" terrain="12,,12,"/>
- <tile id="68" terrain="12,,12,12"/>
- <tile id="69" terrain=",12,12,12"/>
+ <tile id="64" terrain="12,,12,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="11" y="0" width="5" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="68" terrain="12,,12,12">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="11" y="0" width="5" height="6"/>
+  </objectgroup>
+ </tile>
+ <tile id="69" terrain=",12,12,12">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="5" height="5"/>
+   <object id="2" x="0" y="5" width="5" height="1"/>
+  </objectgroup>
+ </tile>
  <tile id="73">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="0" width="16" height="12"/>
@@ -325,9 +364,23 @@
    <frame tileid="99" duration="200"/>
   </animation>
  </tile>
- <tile id="102" terrain=",12,,"/>
- <tile id="103" terrain="12,12,,"/>
- <tile id="104" terrain="12,,,"/>
+ <tile id="102" terrain=",12,,">
+  <objectgroup draworder="index" id="3">
+   <object id="2" x="0" y="11" width="16" height="5"/>
+   <object id="3" x="0" y="0" width="5" height="11"/>
+  </objectgroup>
+ </tile>
+ <tile id="103" terrain="12,12,,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="11" width="16" height="5"/>
+  </objectgroup>
+ </tile>
+ <tile id="104" terrain="12,,,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="11" y="0" width="5" height="16"/>
+   <object id="2" x="0" y="11" width="11" height="5"/>
+  </objectgroup>
+ </tile>
  <tile id="110" terrain=",12,12,"/>
  <tile id="120" terrain="0,0,0,1"/>
  <tile id="121" terrain="0,0,1,1"/>
@@ -447,9 +500,17 @@
    <frame tileid="139" duration="200"/>
   </animation>
  </tile>
- <tile id="142" terrain=",,,18"/>
+ <tile id="142" terrain=",,,18">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="143" terrain=",,18,18"/>
- <tile id="144" terrain=",,18,"/>
+ <tile id="144" terrain=",,18,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="150" terrain="12,,,12"/>
  <tile id="151">
   <objectgroup draworder="index" id="4">
@@ -545,9 +606,17 @@
   </objectgroup>
  </tile>
  <tile id="181" terrain=",18,,"/>
- <tile id="182" terrain=",18,,18"/>
+ <tile id="182" terrain=",18,,18">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="183" terrain="18,18,18,18"/>
- <tile id="184" terrain="18,,18,"/>
+ <tile id="184" terrain="18,,18,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="191">
   <objectgroup draworder="index" id="2">
    <object id="1" x="3" y="0" width="13" height="13"/>
@@ -617,6 +686,21 @@
   </objectgroup>
  </tile>
  <tile id="221" terrain="18,18,,"/>
+ <tile id="222">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="223">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="224">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="240" terrain="1,1,1,0"/>
  <tile id="241" terrain="1,1,0,1"/>
  <tile id="242" terrain="0,0,0,4">
@@ -1119,22 +1203,11 @@
    </object>
   </objectgroup>
  </tile>
- <tile id="445">
-  <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="13" width="16" height="3"/>
-  </objectgroup>
- </tile>
  <tile id="446">
   <objectgroup draworder="index" id="3">
    <object id="2" x="16" y="0">
     <polygon points="0,0 0,16 -16,16 -16,13 -3,13 -3,0"/>
    </object>
-  </objectgroup>
- </tile>
- <tile id="447">
-  <objectgroup draworder="index" id="2">
-   <object id="4" x="0" y="0" width="2" height="16"/>
-   <object id="5" x="14" y="0" width="2" height="16"/>
   </objectgroup>
  </tile>
  <tile id="449" terrain=",,,13"/>
@@ -1174,12 +1247,6 @@
  <tile id="486">
   <objectgroup draworder="index" id="2">
    <object id="1" x="13" y="0" width="3" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="487">
-  <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="2" height="16"/>
-   <object id="2" x="14" y="0" width="2" height="16"/>
   </objectgroup>
  </tile>
  <tile id="489" terrain=",13,,"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.3.2" name="Cave" tilewidth="16" tileheight="16" tilecount="1000" columns="40">
+<tileset version="1.2" tiledversion="1.3.1" name="Cave" tilewidth="16" tileheight="16" tilecount="1000" columns="40">
  <image source="../Art/gfx/cave.png" width="640" height="400"/>
  <terraintypes>
   <terrain name="Cave Floor" tile="0"/>
@@ -7,13 +7,22 @@
   <terrain name="Cave Drop" tile="212"/>
  </terraintypes>
  <tile id="0" terrain="0,0,0,0"/>
+ <tile id="42">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="171" terrain="0,0,0,2"/>
  <tile id="172" terrain="0,0,2,2"/>
  <tile id="173" terrain="0,0,2,0"/>
  <tile id="174" terrain="2,2,2,0"/>
  <tile id="175" terrain="2,2,0,2"/>
  <tile id="211" terrain="0,2,0,2"/>
- <tile id="212" terrain="2,2,2,2"/>
+ <tile id="212" terrain="2,2,2,2">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="213" terrain="2,0,2,0"/>
  <tile id="214" terrain="2,0,2,2"/>
  <tile id="215" terrain="0,2,2,2"/>

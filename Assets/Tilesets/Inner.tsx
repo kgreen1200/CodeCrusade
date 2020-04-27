@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.3.2" name="Inner" tilewidth="16" tileheight="16" tilecount="1000" columns="40">
+<tileset version="1.2" tiledversion="1.3.1" name="Inner" tilewidth="16" tileheight="16" tilecount="1000" columns="40">
  <image source="../Art/gfx/Inner.png" width="640" height="400"/>
  <terraintypes>
   <terrain name="Table" tile="94"/>
@@ -38,6 +38,11 @@
   </objectgroup>
  </tile>
  <tile id="41">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="42">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="0" width="16" height="16"/>
   </objectgroup>
@@ -487,7 +492,11 @@
   </objectgroup>
  </tile>
  <tile id="285" terrain=",3,,3"/>
- <tile id="286" terrain="3,3,3,3"/>
+ <tile id="286" terrain="3,3,3,3">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="287" terrain="3,,3,"/>
  <tile id="288">
   <objectgroup draworder="index" id="2">
@@ -512,9 +521,21 @@
    <object id="1" x="0" y="0" width="16" height="16"/>
   </objectgroup>
  </tile>
- <tile id="325" terrain=",3,,"/>
- <tile id="326" terrain="3,3,,"/>
- <tile id="327" terrain="3,,,"/>
+ <tile id="325" terrain=",3,,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="326" terrain="3,3,,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="327" terrain="3,,,">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="330">
   <objectgroup draworder="index" id="3">
    <object id="2" x="2" y="14" width="14" height="2"/>
