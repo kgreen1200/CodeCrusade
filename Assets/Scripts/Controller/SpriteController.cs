@@ -9,4 +9,5 @@ public static class SpriteController
     public static Sprite[] andSprites = Resources.LoadAll<Sprite>("AndBoxSheet");
     public static Sprite[] orSprites = Resources.LoadAll<Sprite>("OrBoxSheet");
     public static Sprite[] objectSprites = Resources.LoadAll<Sprite>("objects");
+    public static Sprite[] lightSprites = Resources.LoadAll<Sprite>("light");
 }

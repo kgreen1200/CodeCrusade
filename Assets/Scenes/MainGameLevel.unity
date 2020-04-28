@@ -5123,6 +5123,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5589688900904373934, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589688900904373934, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6945002883322514292, guid: ba501b61b4176594f8078f284381b291,
         type: 3}
       propertyPath: inputs.Array.size
@@ -5148,6 +5158,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndNode
       objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7487790478215196332, guid: e8dfc445c89307446bc4e62903614395,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba501b61b4176594f8078f284381b291, type: 3}
 --- !u!4 &1095299379 stripped
@@ -7507,7 +7543,12 @@ PrefabInstance:
     - target: {fileID: 5589688900904373934, guid: ba501b61b4176594f8078f284381b291,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589688900904373934, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 6945002883322514292, guid: ba501b61b4176594f8078f284381b291,
         type: 3}
@@ -7534,6 +7575,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndNode
       objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7487790478215196332, guid: e8dfc445c89307446bc4e62903614395,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba501b61b4176594f8078f284381b291, type: 3}
 --- !u!4 &1766713111 stripped
@@ -8577,6 +8644,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5589688900904373934, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589688900904373934, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6945002883322514292, guid: ba501b61b4176594f8078f284381b291,
         type: 3}
       propertyPath: inputs.Array.size
@@ -8602,6 +8679,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndNode
       objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591944999251102968, guid: ba501b61b4176594f8078f284381b291,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7487790478215196332, guid: e8dfc445c89307446bc4e62903614395,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba501b61b4176594f8078f284381b291, type: 3}
 --- !u!114 &2019965205 stripped

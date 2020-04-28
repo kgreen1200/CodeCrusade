@@ -32,7 +32,7 @@ public class EndNode : MonoBehaviour
         {
             blockContainer.transform.GetChild(i).GetComponent<GridTile>().active = false;
         }
-        sprite.color = black;
+        sprite.sprite = SpriteController.lightSprites[1];
     }
 
     int[] GetInputs()
@@ -84,7 +84,7 @@ public class EndNode : MonoBehaviour
             {
                 exit.GetComponent<GateOpening>().OpenGate();
             }
-            sprite.color = red;
+            sprite.sprite = SpriteController.lightSprites[0];
             return true;
         }
         return false;
