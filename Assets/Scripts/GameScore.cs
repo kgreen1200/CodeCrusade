@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class GameScore : MonoBehaviour
 {
-    public int scoreDecrement = 1;
+    public int scoreDecrement = 10;
     public int maxScore = 5000;
+    public int baseCompletionPoints = 20;
+
+    private int levelsCompleted = 0;
     private int score;
     private float timer;
     public Text scoreText;
@@ -29,5 +32,11 @@ public class GameScore : MonoBehaviour
             scoreText.text = score.ToString();
             timer = 0;
         }
+    }
+
+    public void completeLevel()
+    {
+        score += baseCompletionPoints + 10 * levelsCompleted;
+        levelsCompleted += 1;
     }
 }
