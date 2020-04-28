@@ -14,7 +14,6 @@ public class ExitMenuPanel : ButtonPanel
     // Start is called before the first frame update
     void Start()
     {
-        pause = true;
         owner = transform.parent.gameObject;
 
         commands.Add(0, ExitMenu);
@@ -33,6 +32,12 @@ public class ExitMenuPanel : ButtonPanel
 
     // Called whenever object is disabled
     void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
+
+    // Called when object is destroyed or scene changes
+    void OnDestroy()
     {
         Time.timeScale = 1f;
     }
