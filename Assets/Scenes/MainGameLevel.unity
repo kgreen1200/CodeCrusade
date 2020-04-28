@@ -10263,6 +10263,11 @@ PrefabInstance:
       propertyPath: scoringSystem
       value: 
       objectReference: {fileID: 3874190790109722518}
+    - target: {fileID: 4878963389360060400, guid: 5b6bcf11e1038be4483b8ec9101d0c62,
+        type: 3}
+      propertyPath: isFinalDoor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4878963389360060406, guid: 5b6bcf11e1038be4483b8ec9101d0c62,
         type: 3}
       propertyPath: m_LocalPosition.x

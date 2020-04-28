@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GateOpening : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GateOpening : MonoBehaviour
     public Sprite openSprite;
     public GameObject scoringSystem;
     public AudioSource openSound;
+    public bool isFinalDoor = false;
     void Start()
     {
         
@@ -33,6 +35,10 @@ public class GateOpening : MonoBehaviour
             {
                 openSound.Play();
             }
+        }
+        if (isFinalDoor)
+        {
+            SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
         }
     }
 }
