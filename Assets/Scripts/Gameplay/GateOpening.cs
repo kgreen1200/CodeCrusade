@@ -7,6 +7,7 @@ public class GateOpening : MonoBehaviour
     // Start is called before the first frame update
     public Sprite openSprite;
     public GameObject scoringSystem;
+    public AudioSource openSound;
     void Start()
     {
         
@@ -25,6 +26,13 @@ public class GateOpening : MonoBehaviour
         if (scoringSystem != null)
         {
             scoringSystem.GetComponent<GameScore>().completeLevel();
+        }
+        if (openSound != null)
+        {
+            if (!openSound.isPlaying)
+            {
+                openSound.Play();
+            }
         }
     }
 }
