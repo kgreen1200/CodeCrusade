@@ -48,6 +48,7 @@ public class PausePanel : ButtonPanel
     // Called when object is destroyed or scene changes
     void OnDestroy()
     {
+        RemoveListeners();
         Time.timeScale = 1f;
     }
 
