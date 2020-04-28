@@ -104,7 +104,7 @@ public class SaveOptionsPanel : ButtonPanel
     {
         if (Game.current != null)
         {
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("MainGameLevel", LoadSceneMode.Single);
         }
         else
         {

@@ -7,7 +7,6 @@ public class ButtonPanel : BasePanel
 {
     protected List<Button> entries = new List<Button>();
     protected int selection = 0;
-    protected bool pause = false;
 
     // Called before Start()
     void Awake()
@@ -43,10 +42,9 @@ public class ButtonPanel : BasePanel
     {
         selection = 0;
         AddListeners();
-        entries[selection].Select();
-        if (pause)
+        if (entries.Count != 0)
         {
-            Time.timeScale = 0f;
+            entries[selection].Select();
         }
     }
 
@@ -54,15 +52,14 @@ public class ButtonPanel : BasePanel
     void OnDisable()
     {
         RemoveListeners();
-        if (pause)
-        {
-            Time.timeScale = 1f;
-        }
     }
 
     // Cycle down menu
     protected void Next()
     {
+        if (entries.Count == 0)
+            return;
+
         selection = (selection + 1 < entries.Count) ? (selection + 1) : 0;
         entries[selection].Select();
     }
@@ -70,6 +67,9 @@ public class ButtonPanel : BasePanel
     // Cycle up menu
     protected void Previous()
     {
+        if (entries.Count == 0)
+            return;
+
         selection = (selection - 1 >= 0) ? (selection - 1) : (entries.Count - 1);
         entries[selection].Select();
     }
@@ -77,6 +77,9 @@ public class ButtonPanel : BasePanel
     // Call onClick functions when Fired
     protected override void OnFireEvent(int i)
     {
+        if (entries.Count == 0)
+            return;
+
         switch(i)
         {
             case 0:
@@ -97,6 +100,9 @@ public class ButtonPanel : BasePanel
     // For outside objects to set selection
     public void SetSelection(Button button)
     {
+        if (entries.Count == 0)
+            return;
+
         selection = entries.IndexOf(button);
         entries[selection].Select();
     }

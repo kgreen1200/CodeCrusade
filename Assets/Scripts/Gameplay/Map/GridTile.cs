@@ -92,6 +92,7 @@ public class GridTile : MonoBehaviour
             }
             return output;
         }
+        GetInputs();
         return 0;
     }
 }

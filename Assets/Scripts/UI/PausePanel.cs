@@ -15,8 +15,6 @@ public class PausePanel : ButtonPanel
     // Start is called before the first frame update
     void Start()
     {
-        pause = true;
-
         commands.Add(0, Resume);
         commands.Add(1, Glossary);
         commands.Add(2, Save);
@@ -26,6 +24,32 @@ public class PausePanel : ButtonPanel
         {
             entries[i].onClick.AddListener(commands[i]);
         }
+    }
+
+    // Called whenever object is enabled
+    void OnEnable()
+    {
+        selection = 0;
+        AddListeners();
+        if (entries.Count != 0)
+        {
+            entries[selection].Select();
+        }
+        Time.timeScale = 0f;
+    }
+
+    // Called whenever object is disabled
+    void OnDisable()
+    {
+        RemoveListeners();
+        Time.timeScale = 1f;
+    }
+
+    // Called when object is destroyed or scene changes
+    void OnDestroy()
+    {
+        RemoveListeners();
+        Time.timeScale = 1f;
     }
 
     public void Resume()
