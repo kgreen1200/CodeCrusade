@@ -3130,6 +3130,36 @@ PrefabInstance:
       propertyPath: mainPanel
       value: 
       objectReference: {fileID: 3956948460783850524}
+    - target: {fileID: 1030954324117709152, guid: 72a3c4d8fde1edb49bec05fa32da6dd4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030954324117709152, guid: 72a3c4d8fde1edb49bec05fa32da6dd4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030954324117709152, guid: 72a3c4d8fde1edb49bec05fa32da6dd4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -71
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030954324297743999, guid: 72a3c4d8fde1edb49bec05fa32da6dd4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030954324297743999, guid: 72a3c4d8fde1edb49bec05fa32da6dd4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030954324297743999, guid: 72a3c4d8fde1edb49bec05fa32da6dd4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -71
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72a3c4d8fde1edb49bec05fa32da6dd4, type: 3}
 --- !u!1001 &1023917901
