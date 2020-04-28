@@ -6,6 +6,7 @@ public class GateOpening : MonoBehaviour
 {
     // Start is called before the first frame update
     public Sprite openSprite;
+    public GameObject scoringSystem;
     void Start()
     {
         
@@ -21,5 +22,9 @@ public class GateOpening : MonoBehaviour
         this.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         this.gameObject.GetComponent<SpriteRenderer>().sprite = openSprite;
         this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
+        if (scoringSystem != null)
+        {
+            scoringSystem.GetComponent<GameScore>().completeLevel();
+        }
     }
 }
