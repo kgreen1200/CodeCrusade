@@ -19,8 +19,10 @@ public class NotGate : Block
         {
             if (inputs[0] == 1)
             {
+                Debug.Log("Return 0");
                 return 0;
             }
+            Debug.Log("Return 1");
             return 1;
         }
         return 0;
