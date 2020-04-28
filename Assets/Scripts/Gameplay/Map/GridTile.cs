@@ -13,13 +13,15 @@ public class GridTile : MonoBehaviour
     Vector2 center;
     SpriteRenderer sprite;
 
-    Color blue = new Color(0f, 0f, 1f, 0.4f);
-    Color yellow = new Color(1f, 1f, 0f, 0.4f);
+    Sprite onSprite;
+    Sprite offSprite;
 
     void Start()
     {
         center = new Vector2(transform.position.x, transform.position.y);
         sprite = GetComponent<SpriteRenderer>();
+        offSprite = SpriteController.objectSprites[181];
+        onSprite = SpriteController.objectSprites[182];
     }
 
     void TurnOnWires()
@@ -50,7 +52,7 @@ public class GridTile : MonoBehaviour
         {
             col.transform.position = new Vector3(center.x, center.y, 0);
             block = col.GetComponent<Block>();
-            sprite.color = yellow;
+            sprite.sprite = onSprite;
         }
     }
 
@@ -59,7 +61,7 @@ public class GridTile : MonoBehaviour
         if (block != null && col.CompareTag("Block"))
         {
             block = null;
-            sprite.color = blue;
+            sprite.sprite = offSprite;
         }
     }
 
