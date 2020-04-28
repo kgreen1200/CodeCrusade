@@ -77,7 +77,7 @@ public class InputPanel : ButtonPanel
         Game.current = new Game();
         Game.current.name = text;
 
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainGameLevel", LoadSceneMode.Single);
     }
 
     public void Cancel()
